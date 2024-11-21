@@ -4,12 +4,12 @@
 
 
 
-// listes d'unités et de leurs valeurs numériques et leur nombres, pour faciliter l'extension future.
+// Listes d'unités et de leurs valeurs numériques et leurs nombres, pour faciliter l'extension future.
 // Pour ajouter une unité, il faut ajouter son nom dans la liste "noms_unites"
 // et sa valeur numérique dans la liste "diviseurs_unites". Assurez-vous que les deux
 // ont le même ordre dans les listes respectives.
 // N'oubliez pas de mettre à jour "NOMBRE_UNITES" pour qu'il corresponde à la longueur des listes.
-// Remarque : le pas entre les unités doit être de 1000.    (test test test test)
+// Remarque : le pas entre les unités doit être de 1000.
 const long long diviseurs_unites[] = {1000000000LL, 1000000LL, 1000LL, 1LL};
 const char *noms_unites[] = {"milliard", "million", "mille", ""};
 const int NOMBRE_UNITES = 4;
