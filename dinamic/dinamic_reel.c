@@ -9,7 +9,7 @@
 // et sa valeur numérique dans la liste "diviseurs_unites". Assurez-vous que les deux
 // ont le même ordre dans les listes respectives.
 // N'oubliez pas de mettre à jour "NOMBRE_UNITES" pour qu'il corresponde à la longueur des listes.
-// Remarque : le pas entre les unités doit être de 1000.
+// Remarque : le pas entre les unités doit être de 1000.hhshhsahds
 const long long diviseurs_unites[] = {1000000000LL, 1000000LL, 1000LL, 1LL};
 const char *noms_unites[] = {"milliard", "million", "mille", ""};
 const int NOMBRE_UNITES = 4;
