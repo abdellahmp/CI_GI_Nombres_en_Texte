@@ -78,7 +78,7 @@ int valider_entree(const char *entree) {
     for (; entree[i] != '\0'; i++)
     {
         if (entree[i] == '.' || entree[i] == ',') {
-            if (point_trouve || i == 0 || (i == 1 && (entree[0] == '+' || entree[0] == '-'))) {
+            if (point_trouve || (i == 1 && (entree[0] == '+' || entree[0] == '-'))) {
                 return ERREUR_FORMAT_DECIMAL;
             }
             point_trouve = 1;
@@ -145,7 +145,14 @@ void convertir_nombre_en_lettres(const char *entree, char *resultat) {
     char partie_decimale[DECIMALES_MAX + 1];
     resultat[0] = '\0';
 
+
     extraire_parties_nombre(entree, partie_entiere, partie_decimale);
+
+    // Handle the coma in debut of the numbre
+    if ((entree[0] == ',' || entree[0] == '.')&& partie_entiere[0] == '\0'){
+        partie_entiere[0] = '0';
+        partie_entiere[1] = '\0';
+    }
 
     // Handle zero case properly
     if (strcmp(partie_entiere, "0") == 0 && partie_decimale[0] == '\0') {
