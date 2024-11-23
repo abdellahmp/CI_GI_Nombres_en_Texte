@@ -104,11 +104,10 @@ int valider_entree(const char *entree) {
     // Validation des caractères
     for (; entree[i] != '\0'; i++) {
         if (entree[i] == '.' || entree[i] == ',') {
-            if (point_trouve || premier_caractere) {
+            if (point_trouve) {
                 return ERREUR_FORMAT_DECIMAL;
             }
             point_trouve = 1;
-            premier_caractere = 1;
             continue;
         }
 
