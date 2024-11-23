@@ -173,7 +173,6 @@ int valider_entree(const char *entree) {
     int point_trouve = 0;
     int chiffres_avant_point = 0;
     int chiffres_apres_point = 0;
-    int premier_caractere = 1;
 
     // Vérification du signe
     if (entree[0] == '+' || entree[0] == '-') {
@@ -186,11 +185,10 @@ int valider_entree(const char *entree) {
     // Validation des caractères
     for (; entree[i] != '\0'; i++) {
         if (entree[i] == '.' || entree[i] == ',') {
-            if (point_trouve || premier_caractere) {
+            if (point_trouve) {
                 return ERREUR_FORMAT_DECIMAL;
             }
             point_trouve = 1;
-            premier_caractere = 1;
             continue;
         }
 
@@ -203,7 +201,6 @@ int valider_entree(const char *entree) {
         } else {
             chiffres_apres_point++;
         }
-        premier_caractere = 0;
     }
 
     // Vérification de la longueur du nombre (sans compter les zéros devant)
