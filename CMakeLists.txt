@@ -5,12 +5,12 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(CI_GI_project_fin_semestre
 #        static/static_entie_to_lettre.c
-#        me/reel_en_lettre.c
-#        me/entie_en_lettre_st.c
+#        static-v2/reel_en_lettre.c
+#        static-v2/entie_en_lettre_st.c
 #        static/static_reel.c
 #        dinamic/dinamic_entiere.c)
         dinamic/dinamic_reel.c)
-#        me/reel_en_lettre.c)
+#        static-v2/reel_en_lettre.c)
 
 
 
