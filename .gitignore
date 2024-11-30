@@ -2,3 +2,4 @@
 *.env
 /build/
 cmake-build-debug
+.idea
